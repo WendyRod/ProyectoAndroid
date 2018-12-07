@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+
+        <TextView
+            android:id="@+id/LabelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
+            android:text="E-mail"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            app:layout_constraintBottom_toTopOf="@+id/TxtEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/TxtEmail"
+            android:layout_marginLeft="70dp"
+            android:layout_width="230dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="30dp"
+            android:autoText="false"
+            android:hint="Escribe tu Correo"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/LabelPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LabelEmail" />
+
+        <TextView
+            android:id="@+id/LabelPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginBottom="30dp"
+            android:text="Contraseña"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            app:layout_constraintBottom_toTopOf="@+id/TxtPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TxtEmail" />
+
+        <EditText
+            android:id="@+id/TxtPassword"
+            android:layout_width="230dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginBottom="30dp"
+            android:hint="Escribe tu contraseña"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LabelPassword" />
+
+        <Button
+            android:id="@+id/BtnIngresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/colorPrimary"
+            android:onClick="onClick"
+            android:text="Ingresar"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Registro_C">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registro de Clientes"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Nombre:" />
+
+    <EditText
+            android:id="@+id/nombreC"
+            android:layout_width="190dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"/>
+
+    <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cédula:"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:id="@+id/idC"
+            android:layout_width="190dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp" />
+
+    <TextView
+            android:id="@+id/tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teléfono:"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:id="@+id/telefonoC"
+            android:layout_width="190dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="170dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="35dp"
+        android:text="Aceptar" />
+
+</LinearLayout>

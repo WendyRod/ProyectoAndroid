@@ -15,12 +15,12 @@ public class BD_Helper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(ClienteBD.ClienteInfo.SQL_CREATE_ENTRIES);
+        db.execSQL(Estructura_BD.ClienteInfo.SQL_CREATE_ENTRIES);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(ClienteBD.ClienteInfo.SQL_DELETE_ENTRIES);
+        db.execSQL(Estructura_BD.ClienteInfo.SQL_DELETE_ENTRIES);
         onCreate(db);
     }
 }

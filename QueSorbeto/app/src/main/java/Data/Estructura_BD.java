@@ -2,9 +2,9 @@ package Data;
 
 import android.provider.BaseColumns;
 
-public class ClienteBD {
+public class Estructura_BD {
 
-    public ClienteBD() {
+    public Estructura_BD() {
     }
 
     public static abstract class ClienteInfo implements BaseColumns {
@@ -45,6 +45,6 @@ public class ClienteBD {
                         ProductosInfo.PRECIO_VENTA + " " + TEXT_TYPE + ");";
 
         public static final String SQL_DELETE_ENTRIES =
-                "DROP TABLE IF EXISTS " + ClienteBD.ProductosInfo.TABLE_NAME + ";";
+                "DROP TABLE IF EXISTS " + Estructura_BD.ProductosInfo.TABLE_NAME + ";";
     }
 }

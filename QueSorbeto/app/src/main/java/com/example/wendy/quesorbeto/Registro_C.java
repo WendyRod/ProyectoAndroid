@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import Data.BD_Helper;
-import Data.ClienteBD;
+import Data.Estructura_BD;
 
 public class Registro_C extends Activity {
 
@@ -57,11 +57,11 @@ public class Registro_C extends Activity {
             SQLiteDatabase db = helper.getWritableDatabase();
 
             ContentValues values = new ContentValues();
-            values.put(ClienteBD.ClienteInfo.ID, txtId.getText().toString());
-            values.put(ClienteBD.ClienteInfo.NAME, txtNombre.getText().toString());
-            values.put(ClienteBD.ClienteInfo.PHONE_NUMBER, txtTelefono.getText().toString());
+            values.put(Estructura_BD.ClienteInfo.ID, txtId.getText().toString());
+            values.put(Estructura_BD.ClienteInfo.NAME, txtNombre.getText().toString());
+            values.put(Estructura_BD.ClienteInfo.PHONE_NUMBER, txtTelefono.getText().toString());
 
-            long newRowId = db.insert(ClienteBD.ClienteInfo.TABLE_NAME, null, values);
+            long newRowId = db.insert(Estructura_BD.ClienteInfo.TABLE_NAME, null, values);
 
             txtId.setText("");
             txtNombre.setText("");
@@ -70,26 +70,26 @@ public class Registro_C extends Activity {
             //retorna -1 en caso de error.
             if(newRowId != -1){
                 Toast.makeText(getApplicationContext(), "Los datos se han guardado correctamente con el id " + newRowId, Toast.LENGTH_LONG).show();
+                startActivity(new Intent(Registro_C.this,Clientes.class));
             }
             else
             {
                 if(ExisteID(txtId)){Toast.makeText(getApplicationContext(), "El ID ya existe.", Toast.LENGTH_LONG).show();}
             }
 
-            startActivity(new Intent(Registro_C.this,Clientes.class));
         }
     }
 
     public boolean ExisteID(EditText txtId){
         SQLiteDatabase db = helper.getReadableDatabase();
         String[] projection = {
-                ClienteBD.ClienteInfo.ID
+                Estructura_BD.ClienteInfo.ID
         };
         try {
-            String selection = ClienteBD.ClienteInfo.ID + " = ?";
+            String selection = Estructura_BD.ClienteInfo.ID + " = ?";
             String[] selectionArgs = {txtId.getText().toString()};
             Cursor cursor = db.query(
-                    ClienteBD.ClienteInfo.TABLE_NAME        // The table to query
+                    Estructura_BD.ClienteInfo.TABLE_NAME        // The table to query
                     , projection                    // The array of columns to return (pass null to get all)
                     , selection                     // The columns for the WHERE clause
                     , selectionArgs                 // The values for the WHERE clause

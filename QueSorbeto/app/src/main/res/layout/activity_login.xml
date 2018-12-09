@@ -5,32 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/fondo2"
+    android:background="@drawable/fondo5"
     tools:context=".Login">
 
 
         <TextView
-            android:id="@+id/LabelEmail"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="50dp"
             android:layout_marginBottom="30dp"
-            android:textColor="#4f4f52"
+            android:textStyle="bold"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
             android:text="Inicio de Sesión"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-            app:layout_constraintBottom_toTopOf="@+id/TxtEmail"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="145dp"
+            android:adjustViewBounds="false"
+            android:src="@drawable/cuenta" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"/>
 
         <EditText
             android:id="@+id/TxtEmail"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="60dp"
             android:layout_width="230dp"
             android:layout_height="48dp"
             android:layout_marginBottom="30dp"
-            android:backgroundTint="#4f4f52"
             android:autoText="false"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
@@ -42,14 +50,13 @@
 
         <EditText
             android:id="@+id/TxtPassword"
-            android:layout_marginLeft="70dp"
             android:layout_width="230dp"
             android:layout_height="48dp"
             android:layout_marginBottom="30dp"
-            android:backgroundTint="#4f4f52"
-            android:autoText="false"
+            android:layout_marginLeft="60dp"
+            android:autoText="true"
+            android:inputType = "textPassword"
             android:hint="Contraseña"
-            android:inputType="textEmailAddress"
             android:textAlignment="center"
             app:layout_constraintBottom_toTopOf="@+id/LabelPassword"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,18 +65,18 @@
 
         <Button
             android:id="@+id/BtnIngresar"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginStart="250dp"
-            android:layout_marginBottom="30dp"
-            android:background="#435e76"
+            android:layout_marginBottom="110dp"
+            android:layout_marginStart="100dp"
+            android:background="#f76952"
             android:onClick="onClick"
             android:text="Ingresar"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
-            android:textColor="#aeabab"
+            android:textColor="#ffffff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="OnClick" />
+
 
 </LinearLayout>

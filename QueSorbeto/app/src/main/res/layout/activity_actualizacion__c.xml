@@ -1,13 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Actualizacion_C">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/fondo5"
+android:padding="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
-</android.support.constraint.ConstraintLayout>
+<TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:textStyle="bold"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="70dp"
+    android:layout_marginTop="20dp"
+    android:textSize="20dp"
+    android:text="Datos del Cliente"
+    android:padding="20dp" />
+
+
+
+<EditText
+    android:id="@+id/et_miembro_nombre"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Nombre..."
+    android:layout_marginTop="40dp"
+    android:ems="10" />
+
+<EditText
+    android:id="@+id/et_miembro_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Cédula..."
+    android:layout_marginTop="40dp"
+    android:ems="10" />
+
+<EditText
+    android:id="@+id/et_miembro_telefono"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Teléfono..."
+    android:layout_marginTop="40dp"
+    android:ems="10" />
+
+<Space
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"/>
+
+<Button
+    android:id="@+id/btnConsultar"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="170dp"
+    android:background="#f76952"
+    android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
+    android:textColor="#ffffff"
+    android:text="Actualizar" />
+
+
+</LinearLayout>

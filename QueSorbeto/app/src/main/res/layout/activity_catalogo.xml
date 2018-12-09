@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo5"
+    tools:context=".Catalogo">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="30dp"
+                android:text="Catálogo"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mozzarella $9.05"
+                android:textSize="20dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+            <Button
+                android:id="@+id/btnMozarrella"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:background="@drawable/mozzarella" />
+
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cheddar $5.90"
+                android:textSize="20dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+            <Button
+                android:id="@+id/btnCheddar"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:background="@drawable/cheddar" />
+
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parmesano $7.09"
+                android:textSize="20dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+            <Button
+                android:id="@+id/btnParmesano"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:background="@drawable/parmesano" />
+
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gouda $10.25"
+                android:textSize="20dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+            <Button
+                android:id="@+id/btnGouda"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:background="@drawable/gouda" />
+
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

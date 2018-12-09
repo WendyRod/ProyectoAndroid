@@ -28,7 +28,10 @@
         <activity android:name=".Registro_P" />
         <activity android:name=".Actualizacion_C" />
         <activity android:name=".Actualizacion_P" />
-        <activity android:name=".Menu_Admin"></activity>
+        <activity android:name=".Menu_Admin" />
+        <activity
+            android:name=".Catalogo"
+            android:label="@string/title_activity_catalogo"></activity>
     </application>
 
 </manifest>

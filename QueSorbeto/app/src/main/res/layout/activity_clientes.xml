@@ -4,39 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo5"
     android:orientation="vertical">
     tools:context=".Clientes">
 
-        <TextView
-            android:id="@+id/clientes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="50dp"
-            android:text="Clientes" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Administración de Clientes"
+        android:padding="20dp" />
 
     <Button
         android:id="@+id/btn_registroC"
         android:layout_width="159dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
+        android:layout_marginLeft="100dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
+        android:background="#f76952"
+        android:textColor="#e7e7e7"
         android:layout_marginTop="50dp"
         android:text="Registro" />
 
     <Button
-            android:id="@+id/btn_consultaC"
-            android:layout_width="159dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="50dp"
-            android:text="Consulta" />
+        android:id="@+id/btn_consultaC"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:background="#f76952"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
+        android:textColor="#e7e7e7"
+        android:layout_marginTop="50dp"
+        android:text="Consulta" />
 
     <Button
-            android:id="@+id/btn_actualizacionC"
-            android:layout_width="159dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="50dp"
-            android:text="Actualizacion de Clientes" />
+        android:id="@+id/btn_actualizacionC"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:background="#f76952"
+        android:textColor="#e7e7e7"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:text="Actualización de Clientes" />
 
     </LinearLayout>

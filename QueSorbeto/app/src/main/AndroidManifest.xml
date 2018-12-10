@@ -30,8 +30,11 @@
         <activity android:name=".Actualizacion_P" />
         <activity android:name=".Menu_Admin" />
         <activity
-            android:name=".Catalogo"
-            android:label="@string/title_activity_catalogo"></activity>
+            android:name=".Sorbetos"
+            android:label="@string/title_activity_sorbetos" />
+        <activity
+            android:name=".Quesos"
+            android:label="@string/title_activity_quesos"></activity>
     </application>
 
 </manifest>

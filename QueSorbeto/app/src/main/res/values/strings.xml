@@ -2,4 +2,7 @@
     <string name="app_name">QueSorbeto</string>
     <string name="title_activity_lista_actualizacion__c">ListaActualizacion_C</string>
     <string name="title_activity_catalogo">Catalogo</string>
+    <string name="title_activity_catalogo_s">CatalogoS</string>
+    <string name="title_activity_sorbetos">Sorbetos</string>
+    <string name="title_activity_quesos">Quesos</string>
 </resources>

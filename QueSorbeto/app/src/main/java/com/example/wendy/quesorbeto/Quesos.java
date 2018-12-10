@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Catalogo extends Activity {
+public class Quesos extends Activity {
 
     Button BotonM;
     Button BotonC;
@@ -17,7 +17,7 @@ public class Catalogo extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_catalogo);
+        setContentView(R.layout.activity_quesos);
 
         inicializaPantalla();
     }
@@ -31,32 +31,28 @@ public class Catalogo extends Activity {
         BotonM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Ir a Facturación", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(Catalogo.this,Menu_Cliente.class));
+                startActivity(new Intent(Quesos.this,Facturacion.class));
             }
         });
 
         BotonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Ir a Facturación", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(Catalogo.this,Menu_Cliente.class));
+                startActivity(new Intent(Quesos.this,Facturacion.class));
             }
         });
 
         BotonP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Ir a Facturación", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(Catalogo.this,Menu_Cliente.class));
+                startActivity(new Intent(Quesos.this,Facturacion.class));
             }
         });
 
         BotonG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Ir a Facturación", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(Catalogo.this,Menu_Cliente.class));
+                startActivity(new Intent(Quesos.this,Facturacion.class));
             }
         });
 

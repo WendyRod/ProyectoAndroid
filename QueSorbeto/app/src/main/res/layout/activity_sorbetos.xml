@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo5"
+    tools:context=".Sorbetos">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="30dp"
+                android:text="Catálogo"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vainilla $1.05"
+                android:textSize="20dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+            <Button
+                android:id="@+id/btnVainilla"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:background="@drawable/vainilla" />
+
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fresa $1.00"
+                android:textSize="20dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+            <Button
+                android:id="@+id/btnFresa"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:background="@drawable/fresa" />
+
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chocolate $1.10"
+                android:textSize="20dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+            <Button
+                android:id="@+id/btnChocolate"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:background="@drawable/chocolate" />
+
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

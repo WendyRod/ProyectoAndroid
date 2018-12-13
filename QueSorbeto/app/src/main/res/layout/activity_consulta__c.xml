@@ -50,11 +50,11 @@
         android:text="Cédula:" />
 
     <TextView
-        android:id="@+id/txtID"
-        android:textSize="17dp"
+        android:id="@+id/lblID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textSize="17dp" />
 
     <Space
         android:layout_width="wrap_content"

@@ -11,29 +11,35 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import Data.BD_Helper;
+
+
 import Data.Estructura_BD;
 
 public class Consulta_C extends Activity {
 
-    private Button consultarbtn;
+    Button consultarbtn;
     EditText txtID;
     TextView labelID, labelNombre, labelTelefono;
 
-    final BD_Helper helper = new BD_Helper(this);
+    private final BD_Helper helper = new BD_Helper(this);
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consulta__c);
 
-
+        txtID = findViewById(R.id.idC);
         consultarbtn = findViewById(R.id.btnConsultar);
+        labelID = findViewById(R.id.lblID);
+        labelNombre = findViewById(R.id.lblNombre);
+        labelTelefono = findViewById(R.id.lblTelefono);
 
 
         consultarbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Hola", Toast.LENGTH_LONG).show();
                 consultar();
             }
         });
@@ -53,11 +59,9 @@ public class Consulta_C extends Activity {
                 };
 
 // Filter results WHERE "title" = 'My Title'
-                txtID = findViewById(R.id.idC);
-                String selection = Estructura_BD.ClienteInfo.ID + " = ";
-                String[] selectionArgs = {txtID.getText().toString()};
 
-        System.out.println("1_HKAJSSJAKSKASHASHSHASKAHSKHAS");
+                String selection = Estructura_BD.ClienteInfo.ID + " = ?";
+                String[] selectionArgs = { txtID.getText().toString() };
 
 // How you want the results sorted in the resulting Cursor
                 /*String sortOrder =
@@ -73,24 +77,17 @@ public class Consulta_C extends Activity {
                             null//sortOrder               // The sort order
                     );
 
-                    System.out.println("2_HKAJSSJAKSKASHASHSHASKAHSKHAS");
-
                     //El cursor avanza
                     cursor.moveToFirst();
-
-                    System.out.println("3_HKAJSSJAKSKASHASHSHASKAHSKHAS");
 
                     labelID.setText(cursor.getString(0));
                     labelNombre.setText(cursor.getString(1));
                     labelTelefono.setText(cursor.getString(2));
 
-                    System.out.println("4_HKAJSSJAKSKASHASHSHASKAHSKHAS");
                     cursor.close();
 
-                    System.out.println("5_HKAJSSJAKSKASHASHSHASKAHSKHAS");
                 } catch (Exception e){
                     Toast.makeText(getApplicationContext(), "¡El ID " + txtID.getText().toString() + " no existe!", Toast.LENGTH_LONG).show();
                 }
-
     }
 }

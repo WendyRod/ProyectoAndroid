@@ -15,7 +15,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/idC"
+            android:id="@+id/txtCodigoP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -30,13 +30,13 @@
         android:layout_height="30dp"/>
 
     <Button
-        android:id="@+id/btnConsultar"
+        android:id="@+id/btnConsultarP"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="#f76952"
-        android:textColor="#ffffff"
+        android:text="Consultar"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
-        android:text="Consultar" />
+        android:textColor="#ffffff" />
 
     <Space
         android:layout_width="wrap_content"
@@ -50,11 +50,11 @@
         android:text="Código:" />
 
     <TextView
-        android:id="@+id/txtID"
-        android:textSize="17dp"
+        android:id="@+id/lblCodigoP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textSize="17dp" />
 
     <Space
         android:layout_width="wrap_content"
@@ -68,11 +68,11 @@
         android:text="Nombre:" />
 
     <TextView
-        android:id="@+id/lblNombre"
-        android:textSize="17dp"
+        android:id="@+id/lblNombreP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textSize="17dp" />
 
     <Space
         android:layout_width="wrap_content"
@@ -86,10 +86,10 @@
         android:text="Precio:" />
 
     <TextView
-        android:id="@+id/lblPrecio"
-        android:textSize="17dp"
+        android:id="@+id/lblPrecioP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textSize="17dp" />
 
 </LinearLayout>

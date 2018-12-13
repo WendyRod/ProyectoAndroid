@@ -21,16 +21,6 @@
 
 
     <EditText
-        android:id="@+id/nombreC"
-        android:layout_width="190dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:hint="Nombre..."/>
-
-    <EditText
         android:id="@+id/idC"
         android:layout_width="190dp"
         android:layout_height="45dp"
@@ -40,6 +30,16 @@
         android:layout_marginTop="40dp"
         android:hint="Cédula..."/>
 
+
+    <EditText
+        android:id="@+id/nombreC"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Nombre..."
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/telefonoC"

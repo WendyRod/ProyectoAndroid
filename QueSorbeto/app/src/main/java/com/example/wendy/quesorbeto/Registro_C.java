@@ -20,6 +20,8 @@ public class Registro_C extends Activity {
 
     EditText txtId, txtNombre, txtTelefono;
 
+    private final BD_Helper helper = new BD_Helper(this);
+
     //Metodos m=new Metodos();
 
     @Override
@@ -47,8 +49,6 @@ public class Registro_C extends Activity {
         });
     }
 
-    final BD_Helper helper = new BD_Helper((this));
-
     public void validar(){
         if(txtNombre.getText().toString().isEmpty() || txtId.getText().toString().isEmpty() || txtTelefono.getText().toString().isEmpty()){
             Toast.makeText(getApplicationContext(), "Hay espacios vacios", Toast.LENGTH_LONG).show();
@@ -71,6 +71,7 @@ public class Registro_C extends Activity {
             if(newRowId != -1){
                 Toast.makeText(getApplicationContext(), "Los datos se han guardado correctamente con el id " + newRowId, Toast.LENGTH_LONG).show();
                 startActivity(new Intent(Registro_C.this,Clientes.class));
+                finish();
             }
             else
             {

@@ -33,18 +33,19 @@ public class Estructura_BD {
 
         public static final String TABLE_NAME = "producto";
         public static final String NAME_P = "nameP";
-        public static final String ID_P = "idP";
-        public static final String PRECIO_VENTA = "precio-ventaP";
+        public static final String COD_P = "idP";
+        public static final String PRECIO_VENTA = "precio_ventaP";
 
         private static final String TEXT_TYPE = " TEXT";
         private static final String COMMA_SEP = ",";
         public static final String SQL_CREATE_ENTRIES =
                 "CREATE TABLE " + ProductosInfo.TABLE_NAME + " (" +
-                        ProductosInfo.ID_P + " INTEGER PRIMARY KEY," +
+                        ProductosInfo.COD_P + " INTEGER PRIMARY KEY," +
                         ProductosInfo.NAME_P + " " + TEXT_TYPE + COMMA_SEP +
                         ProductosInfo.PRECIO_VENTA + " " + TEXT_TYPE + ");";
 
         public static final String SQL_DELETE_ENTRIES =
                 "DROP TABLE IF EXISTS " + Estructura_BD.ProductosInfo.TABLE_NAME + ";";
+
     }
 }

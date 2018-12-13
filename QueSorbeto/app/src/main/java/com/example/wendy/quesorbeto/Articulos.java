@@ -21,9 +21,9 @@ public class Articulos extends Activity implements View.OnClickListener{
     }
 
     public void inicializaPantalla(){
-        botonConsultaP=(Button) findViewById(R.id.btn_consultaP);
-        botonRegP=(Button) findViewById(R.id.btn_registroP);
-        botonActP=(Button) findViewById(R.id.btn_actualizacionP);
+        botonConsultaP= findViewById(R.id.btn_consultaP);
+        botonRegP= findViewById(R.id.btn_registroP);
+        botonActP= findViewById(R.id.btn_actualizacionP);
 
         botonConsultaP.setOnClickListener(this);
         botonRegP.setOnClickListener(this);

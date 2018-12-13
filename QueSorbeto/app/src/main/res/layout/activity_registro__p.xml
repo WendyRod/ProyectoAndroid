@@ -21,35 +21,35 @@
         android:padding="20dp" />
 
     <EditText
-        android:id="@+id/nombreC"
+        android:id="@+id/txtCodigoP"
+        android:layout_width="190dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Código..."
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/txtNombreP"
         android:layout_width="190dp"
         android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:hint="Nombre..."/>
-
-    <EditText
-        android:id="@+id/idC"
-        android:layout_width="190dp"
-        android:layout_height="45dp"
         android:ems="10"
-        android:inputType="number"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:hint="Código..."/>
+        android:hint="Nombre..."
+        android:inputType="textPersonName" />
 
 
     <EditText
-        android:id="@+id/telefonoC"
+        android:id="@+id/txtPrecioP"
         android:layout_width="190dp"
         android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="phone"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:hint="Precio..."/>
+        android:ems="10"
+        android:hint="Precio..."
+        android:inputType="phone" />
 
     <Button
         android:id="@+id/btnAceptar"

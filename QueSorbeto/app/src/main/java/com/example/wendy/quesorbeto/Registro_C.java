@@ -22,7 +22,7 @@ public class Registro_C extends Activity {
 
     private final BD_Helper helper = new BD_Helper(this);
 
-    //Metodos m=new Metodos();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

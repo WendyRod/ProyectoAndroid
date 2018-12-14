@@ -78,7 +78,7 @@ public class Registro_P extends Activity {
         }
     }
 
-    public boolean ExisteID(EditText txtId){
+    public boolean ExisteID(EditText CodigoP){
         SQLiteDatabase db = helper.getReadableDatabase();
         String[] projection = {
                 Estructura_BD.ProductosInfo.COD_P

@@ -24,31 +24,32 @@ public class Actualizacion_C extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizacion__c);
 
-        id = findViewById(R.id.et_miembro_id);
-        nombre = findViewById(R.id.et_miembro_nombre);
-        telefono = findViewById(R.id.et_miembro_telefono);
+        id = findViewById(R.id.txtId);
+        nombre = findViewById(R.id.txtNombre);
+        telefono = findViewById(R.id.txtTel);
 
         actualizar = findViewById(R.id.btnActualizar);
-
         actualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                actualiza();
+                actualiza(id);
+
             }
         });
     }
 
+    public void actualiza(EditText id){
+        SQLiteDatabase db = helper.getWritableDatabase();
 
-    public void actualiza (){
-
-        SQLiteDatabase db = helper.getReadableDatabase();
+        String name = nombre.getText().toString();
+        String tel = telefono.getText().toString();
 
         ContentValues values = new ContentValues();
-        values.put(Estructura_BD.ClienteInfo.NAME, nombre.getText().toString());
-        values.put(Estructura_BD.ClienteInfo.PHONE_NUMBER, telefono.getText().toString());
+        values.put(Estructura_BD.ClienteInfo.NAME, name);
+        values.put(Estructura_BD.ClienteInfo.PHONE_NUMBER, tel);
 
 
-        String selection = Estructura_BD.ClienteInfo.ID+ "LIKE ?";
+        String selection = Estructura_BD.ClienteInfo.ID + " LIKE ?";
         String[] selectionArgs = { id.getText().toString()};
 
         int count = db.update(
@@ -62,3 +63,4 @@ public class Actualizacion_C extends Activity {
     }
 
 }
+

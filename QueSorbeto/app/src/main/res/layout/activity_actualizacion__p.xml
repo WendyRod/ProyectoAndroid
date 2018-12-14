@@ -18,44 +18,47 @@
         android:padding="20dp" />
 
 
-
     <EditText
-        android:id="@+id/et_nombreP"
+        android:id="@+id/txtCodigo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre..."
         android:layout_marginTop="40dp"
-        android:ems="10" />
-
-    <EditText
-        android:id="@+id/et_codigoP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:ems="10"
         android:hint="Código..."
-        android:layout_marginTop="40dp"
-        android:ems="10" />
+        android:inputType="number" />
+
 
     <EditText
-        android:id="@+id/et_precioP"
+        android:id="@+id/txtNombreP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Precio..."
         android:layout_marginTop="40dp"
-        android:ems="10" />
+        android:ems="10"
+        android:hint="Nombre..."
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txtPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Precio..."
+        android:inputType="number" />
 
     <Space
         android:layout_width="wrap_content"
         android:layout_height="30dp"/>
 
     <Button
-        android:id="@+id/btnConsultar"
+        android:id="@+id/btnActualizar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="170dp"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
         android:background="#f76952"
-        android:textColor="#ffffff"
-        android:text="Actualizar" />
+        android:text="Actualizar"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
+        android:textColor="#ffffff" />
 
 
 </LinearLayout>

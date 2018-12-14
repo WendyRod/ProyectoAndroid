@@ -48,4 +48,32 @@ public class Estructura_BD {
                 "DROP TABLE IF EXISTS " + Estructura_BD.ProductosInfo.TABLE_NAME + ";";
 
     }
+
+    public static abstract class FacturaInfo implements BaseColumns {
+
+        //Tabla de factura
+
+        public static final String TABLE_NAME = "factura";
+        private static int numeroF;
+        public static final int NUMEROF = numeroF;
+        public static final String CLIENTE = "cliente";
+        public static final String PRODUCTO = "producto";
+        private static int cantidad;
+        public static final int CANTIDAD = cantidad;
+        //public final date FECHA = fecha;
+
+        private static final String TEXT_TYPE = " TEXT";
+        private static final String COMMA_SEP = ",";
+        public static final String SQL_CREATE_ENTRIES =
+                "CREATE TABLE " + FacturaInfo.TABLE_NAME + " (" +
+                        FacturaInfo.NUMEROF + " INTEGER PRIMARY KEY," +
+                        FacturaInfo.CLIENTE + " " + TEXT_TYPE + COMMA_SEP +
+                        FacturaInfo.PRODUCTO + " " + TEXT_TYPE + COMMA_SEP +
+                        FacturaInfo.CANTIDAD + " " + TEXT_TYPE + COMMA_SEP +
+                        /*FacturaInfo.FECHA + " " + TEXT_TYPE +*/ ");";
+
+        public static final String SQL_DELETE_ENTRIES =
+                "DROP TABLE IF EXISTS " + Estructura_BD.FacturaInfo.TABLE_NAME + ";";
+
+    }
 }

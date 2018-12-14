@@ -4,8 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.wendy.quesorbeto.Consulta_C;
-
 public class BD_Helper extends SQLiteOpenHelper {
 
     public static final int DATABASE_VERSION = 1;
@@ -19,12 +17,14 @@ public class BD_Helper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Estructura_BD.ClienteInfo.SQL_CREATE_ENTRIES);
         db.execSQL(Estructura_BD.ProductosInfo.SQL_CREATE_ENTRIES);
+        db.execSQL(Estructura_BD.FacturaInfo.SQL_CREATE_ENTRIES);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(Estructura_BD.ClienteInfo.SQL_DELETE_ENTRIES);
         db.execSQL(Estructura_BD.ProductosInfo.SQL_DELETE_ENTRIES);
+        db.execSQL(Estructura_BD.FacturaInfo.SQL_DELETE_ENTRIES);
         onCreate(db);
     }
 }

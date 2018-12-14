@@ -6,6 +6,9 @@ public class User {
     public String Mail;
     public String Password;
 
+    public User() {
+    }
+
     //Builder
     public User(String _Mail, String _Password) {
         this.Mail = _Mail;

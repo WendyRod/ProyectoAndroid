@@ -24,7 +24,6 @@ public class Consulta_C extends Activity {
     private final BD_Helper helper = new BD_Helper(this);
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

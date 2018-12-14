@@ -5,4 +5,7 @@
     <string name="title_activity_catalogo_s">CatalogoS</string>
     <string name="title_activity_sorbetos">Sorbetos</string>
     <string name="title_activity_quesos">Quesos</string>
+    <string name="title_activity_lista_actualizar__c">ListaActualizar_C</string>
+    <string name="title_activity_lista_clientes">ListaClientes</string>
+    <string name="title_activity_lista_productos">ListaProductos</string>
 </resources>

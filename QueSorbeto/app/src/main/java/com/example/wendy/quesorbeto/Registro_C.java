@@ -52,7 +52,7 @@ public class Registro_C extends Activity {
         miTarea laTarea = new miTarea();
         laTarea.execute();
 
-        spinner=(Spinner) findViewById(R.id.country);
+        //spinner=(Spinner) findViewById(R.id.country);
 
     }
 

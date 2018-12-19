@@ -1,11 +1,16 @@
 package com.example.wendy.quesorbeto;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import Data.BD_Helper;
+import Data.Estructura_BD;
 
 public class Quesos extends Activity {
 
@@ -13,6 +18,7 @@ public class Quesos extends Activity {
     Button BotonC;
     Button BotonP;
     Button BotonG;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,7 @@ public class Quesos extends Activity {
     }
 
     public void inicializaPantalla(){
+
         BotonM=(Button) findViewById(R.id.btnMozarrella);
         BotonC=(Button) findViewById(R.id.btnCheddar);
         BotonP=(Button) findViewById(R.id.btnParmesano);

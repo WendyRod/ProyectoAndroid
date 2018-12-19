@@ -13,11 +13,11 @@
             android:layout_width="wrap_content"
             android:textStyle="bold"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="95dp"
+            android:layout_marginLeft="105dp"
             android:layout_marginTop="50dp"
             android:textSize="20dp"
             android:layout_marginBottom="10dp"
-            android:text="Menú Principal"
+            android:text="Bienvenid@s"
             android:padding="20dp" />
 
         <ImageView
@@ -29,24 +29,24 @@
             android:src="@drawable/cheese" />
 
         <Button
-            android:id="@+id/btn_quesos"
+            android:id="@+id/btn_tienda"
             android:layout_width="185dp"
             android:layout_height="46dp"
             android:layout_marginLeft="90dp"
             android:layout_marginTop="50dp"
             android:background="#f76952"
-            android:text="Quesos"
+            android:text="Ir a tienda"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
             android:textColor="#e7e7e7" />
 
         <Button
-            android:id="@+id/btn_sorbetos"
+            android:id="@+id/btn_volver"
             android:layout_width="185dp"
             android:layout_height="46dp"
             android:layout_marginLeft="90dp"
             android:layout_marginTop="40dp"
             android:background="#f76952"
-            android:text="Sorbetos"
+            android:text="Volver"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
             android:textColor="#e7e7e7" />
 

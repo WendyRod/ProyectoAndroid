@@ -24,9 +24,9 @@ public class Actualizacion_C extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizacion__c);
 
-        id = findViewById(R.id.txtID);
+        id = findViewById(R.id.txtId);
         nombre = findViewById(R.id.txtNombre);
-        telefono = findViewById(R.id.txtTelefono);
+        telefono = findViewById(R.id.txtTel);
 
         actualizar = findViewById(R.id.btnActualizar);
         actualizar.setOnClickListener(new View.OnClickListener() {

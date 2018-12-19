@@ -18,9 +18,11 @@ public class Registro_P extends Activity {
 
     Button aceptar;
 
-    EditText CodigoP, NombreP, PrecioP;
+    EditText txtCodigo, txtNombreP, txtPrecio;
 
     private final BD_Helper helper = new BD_Helper(this);
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +30,16 @@ public class Registro_P extends Activity {
         setContentView(R.layout.activity_registro__p);
 
         inicializaPantalla();
+
     }
 
     public void inicializaPantalla() {
 
-        aceptar =  findViewById(R.id.btnAceptar);
+        aceptar = (Button) findViewById(R.id.btnAceptarP);
 
-        CodigoP =  findViewById(R.id.txtCodigoP);
-        NombreP =  findViewById(R.id.txtNombreP);
-        PrecioP =  findViewById(R.id.txtPrecioP);
+        txtCodigo = (EditText) findViewById(R.id.txtCodigoP);
+        txtNombreP = (EditText) findViewById(R.id.txtNombreP);
+        txtPrecio = (EditText) findViewById(R.id.txtPrecioP);
 
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,56 +50,57 @@ public class Registro_P extends Activity {
     }
 
     public void validar(){
-        if(CodigoP.getText().toString().isEmpty() || NombreP.getText().toString().isEmpty() || PrecioP.getText().toString().isEmpty()){
+        if(txtNombreP.getText().toString().isEmpty() || txtCodigo.getText().toString().isEmpty() || txtPrecio.getText().toString().isEmpty()){
             Toast.makeText(getApplicationContext(), "Hay espacios vacios", Toast.LENGTH_LONG).show();
-            //startActivity(new Intent(Registro_C.this,Registro_C.class));
+
         }else{
             SQLiteDatabase db = helper.getWritableDatabase();
 
             ContentValues values = new ContentValues();
-            values.put(Estructura_BD.ProductosInfo.COD_P, CodigoP.getText().toString());
-            values.put(Estructura_BD.ProductosInfo.NAME_P, NombreP.getText().toString());
-            values.put(Estructura_BD.ProductosInfo.PRECIO_VENTA, PrecioP.getText().toString());
+            values.put(Estructura_BD.ProductosInfo.COD_P, txtCodigo.getText().toString());
+            values.put(Estructura_BD.ProductosInfo.NAME_P, txtNombreP.getText().toString());
+            values.put(Estructura_BD.ProductosInfo.PRECIO_VENTA, txtPrecio.getText().toString());
 
-            long newRowId = db.insert(Estructura_BD.ProductosInfo.TABLE_NAME, null, values);
+            long newRowId = db.insert(Estructura_BD.ClienteInfo.TABLE_NAME, null, values);
 
-            CodigoP.setText("");
-            NombreP.setText("");
-            PrecioP.setText("");
+            txtCodigo.setText("");
+            txtNombreP.setText("");
+            txtPrecio.setText("");
 
-            //retorna -1 en caso de error.
+            //retorna -1 en caso de error.3
             if(newRowId != -1){
                 Toast.makeText(getApplicationContext(), "Los datos se han guardado correctamente con el id " + newRowId, Toast.LENGTH_LONG).show();
                 startActivity(new Intent(Registro_P.this,Articulos.class));
                 finish();
             }
-            else
-            {
-                if(ExisteID(CodigoP)){Toast.makeText(getApplicationContext(), "El ID ya existe.", Toast.LENGTH_LONG).show();}
+            else {
+                if (ExisteID(txtCodigo)) {
+                    Toast.makeText(getApplicationContext(), "El ID ya existe.", Toast.LENGTH_LONG).show();
+                }
             }
 
         }
     }
 
-    public boolean ExisteID(EditText CodigoP){
+    public boolean ExisteID(EditText txtCodigo){
         SQLiteDatabase db = helper.getReadableDatabase();
         String[] projection = {
                 Estructura_BD.ProductosInfo.COD_P
         };
         try {
             String selection = Estructura_BD.ProductosInfo.COD_P + " = ?";
-            String[] selectionArgs = {CodigoP.getText().toString()};
+            String[] selectionArgs = {txtCodigo.getText().toString()};
             Cursor cursor = db.query(
-                    Estructura_BD.ProductosInfo.TABLE_NAME        // The table to query
+                    Estructura_BD.ClienteInfo.TABLE_NAME       // The table to query
                     , projection                    // The array of columns to return (pass null to get all)
                     , selection                     // The columns for the WHERE clause
                     , selectionArgs                 // The values for the WHERE clause
                     , null                 // don't group the rows
                     , null                  // don't filter by row groups
-                    , null //sortOrder      // The sort order
+                    , null//sortOrder      // The sort order
             );
             cursor.moveToFirst();
-            if(cursor.getString(0).equalsIgnoreCase(CodigoP.getText().toString())){
+            if(cursor.getString(0).equalsIgnoreCase(txtCodigo.getText().toString())){
                 cursor.close();
                 return true;
             }else{
@@ -108,3 +112,4 @@ public class Registro_P extends Activity {
         }
     }
 }
+

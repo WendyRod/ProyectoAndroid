@@ -35,9 +35,6 @@
         <activity
             android:name=".Quesos"
             android:label="@string/title_activity_quesos" />
-        <activity
-            android:name=".ListaActualizar_C"
-            android:label="@string/title_activity_lista_actualizar__c" />
     </application>
 
 </manifest>

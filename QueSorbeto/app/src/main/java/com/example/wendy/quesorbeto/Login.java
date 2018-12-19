@@ -1,9 +1,7 @@
 package com.example.wendy.quesorbeto;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +16,7 @@ public class Login extends Activity{
     private EditText Password;
     private Button   Acceder;
 
-    Context miContexto;
+    /*Context miContexto;
     private SharedPreferences PreferenciasConfiguracion;
     private SharedPreferences.Editor editorPreConfig;
 
@@ -41,7 +39,7 @@ public class Login extends Activity{
         SharedPreferences prefs=miContexto.getSharedPreferences("PreConfig",miContexto.MODE_PRIVATE);
         email = prefs.getString("email", user.Mail);
         return email;
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

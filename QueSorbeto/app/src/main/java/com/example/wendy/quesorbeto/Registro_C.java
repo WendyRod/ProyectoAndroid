@@ -33,14 +33,10 @@ public class Registro_C extends Activity {
     Util_UI_Class UtilesUI = new Util_UI_Class();
 
     Button aceptar;
-
     EditText txtId, txtNombre, txtTelefono;
-
     Spinner spinner;
 
     private final BD_Helper helper = new BD_Helper(this);
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

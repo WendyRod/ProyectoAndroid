@@ -8,8 +8,8 @@ import android.widget.Button;
 
 public class Menu_Cliente extends Activity {
 
-    Button BotonQ;
-    Button BotonS;
+    Button BotonT;
+    Button BotonV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,20 +20,20 @@ public class Menu_Cliente extends Activity {
     }
 
     public void inicializaPantalla(){
-        BotonQ=(Button) findViewById(R.id.btn_quesos);
-        BotonS=(Button) findViewById(R.id.btn_sorbetos);
+        BotonT=(Button) findViewById(R.id.btn_tienda);
+        BotonV=(Button) findViewById(R.id.btn_volver);
 
-        BotonQ.setOnClickListener(new View.OnClickListener() {
+        BotonT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Menu_Cliente.this,Quesos.class));
             }
         });
 
-        BotonS.setOnClickListener(new View.OnClickListener() {
+        BotonV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Menu_Cliente.this,Sorbetos.class));
+                startActivity(new Intent(Menu_Cliente.this,Login.class));
             }
         });
     }

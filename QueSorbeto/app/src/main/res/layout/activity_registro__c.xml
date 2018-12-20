@@ -55,7 +55,8 @@
         android:id="@+id/country"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
-        android:layout_marginLeft="190dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/btnAceptar"
@@ -64,8 +65,8 @@
         android:textColor="#e7e7e7"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle"
         android:layout_height="55dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="30dp"
         android:text="Aceptar" />
 
 </LinearLayout>

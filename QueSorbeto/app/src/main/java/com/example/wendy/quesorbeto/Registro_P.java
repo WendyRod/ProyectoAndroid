@@ -14,7 +14,7 @@ import android.widget.Toast;
 import Data.BD_Helper;
 import Data.Estructura_BD;
 
-public class Registro_P extends Activity {
+public class Registro_P extends Activity{
 
     Button aceptar;
 
@@ -61,7 +61,7 @@ public class Registro_P extends Activity {
             values.put(Estructura_BD.ProductosInfo.NAME_P, txtNombreP.getText().toString());
             values.put(Estructura_BD.ProductosInfo.PRECIO_VENTA, txtPrecio.getText().toString());
 
-            long newRowId = db.insert(Estructura_BD.ClienteInfo.TABLE_NAME, null, values);
+            long newRowId = db.insert(Estructura_BD.ProductosInfo.TABLE_NAME, null, values);
 
             txtCodigo.setText("");
             txtNombreP.setText("");
@@ -91,7 +91,7 @@ public class Registro_P extends Activity {
             String selection = Estructura_BD.ProductosInfo.COD_P + " = ?";
             String[] selectionArgs = {txtCodigo.getText().toString()};
             Cursor cursor = db.query(
-                    Estructura_BD.ClienteInfo.TABLE_NAME       // The table to query
+                    Estructura_BD.ProductosInfo.TABLE_NAME       // The table to query
                     , projection                    // The array of columns to return (pass null to get all)
                     , selection                     // The columns for the WHERE clause
                     , selectionArgs                 // The values for the WHERE clause

@@ -53,7 +53,7 @@ public class Actualizacion_P extends Activity {
         String[] selectionArgs = { codigo.getText().toString()};
 
         int count = db.update(
-                Estructura_BD.ClienteInfo.TABLE_NAME,
+                Estructura_BD.ProductosInfo.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);

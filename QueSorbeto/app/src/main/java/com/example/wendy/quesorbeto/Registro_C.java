@@ -9,6 +9,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -34,6 +35,7 @@ public class Registro_C extends Activity {
 
     Button aceptar;
     EditText txtId, txtNombre, txtTelefono;
+
     Spinner spinner;
 
     private final BD_Helper helper = new BD_Helper(this);
@@ -45,11 +47,13 @@ public class Registro_C extends Activity {
 
         inicializaPantalla();
 
-        miTarea laTarea = new miTarea();
-        laTarea.execute();
+        //miTarea laTarea = new miTarea();
+        //laTarea.execute();
 
-        //spinner=(Spinner) findViewById(R.id.country);
-
+        spinner=(Spinner) findViewById(R.id.country);
+        String[] country = {"Costa Rica", "Italia", "Argentina", "Inglaterra", "Colombia",
+                            "USA", "México", "Francia", "Canadá", "Portugal", "Chile"};
+        spinner.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, country));
     }
 
     public void inicializaPantalla() {
@@ -68,11 +72,11 @@ public class Registro_C extends Activity {
         });
     }
 
-    public void validar(){
-        if(txtNombre.getText().toString().isEmpty() || txtId.getText().toString().isEmpty() || txtTelefono.getText().toString().isEmpty()){
+    public void validar() {
+        if (txtNombre.getText().toString().isEmpty() || txtId.getText().toString().isEmpty() || txtTelefono.getText().toString().isEmpty()) {
             Toast.makeText(getApplicationContext(), "Hay espacios vacios", Toast.LENGTH_LONG).show();
             //startActivity(new Intent(Registro_C.this,Registro_C.class));
-        }else{
+        } else {
             SQLiteDatabase db = helper.getWritableDatabase();
 
             ContentValues values = new ContentValues();
@@ -87,20 +91,20 @@ public class Registro_C extends Activity {
             txtTelefono.setText("");
 
             //retorna -1 en caso de error.
-            if(newRowId != -1){
+            if (newRowId != -1) {
                 Toast.makeText(getApplicationContext(), "Los datos se han guardado correctamente con el id " + newRowId, Toast.LENGTH_LONG).show();
-                startActivity(new Intent(Registro_C.this,Clientes.class));
+                startActivity(new Intent(Registro_C.this, Clientes.class));
                 finish();
-            }
-            else
-            {
-                if(ExisteID(txtId)){Toast.makeText(getApplicationContext(), "El ID ya existe.", Toast.LENGTH_LONG).show();}
+            } else {
+                if (ExisteID(txtId)) {
+                    Toast.makeText(getApplicationContext(), "El ID ya existe.", Toast.LENGTH_LONG).show();
+                }
             }
 
         }
     }
 
-    public boolean ExisteID(EditText txtId){
+    public boolean ExisteID(EditText txtId) {
         SQLiteDatabase db = helper.getReadableDatabase();
         String[] projection = {
                 Estructura_BD.ClienteInfo.ID
@@ -118,20 +122,20 @@ public class Registro_C extends Activity {
                     , null//sortOrder      // The sort order
             );
             cursor.moveToFirst();
-            if(cursor.getString(0).equalsIgnoreCase(txtId.getText().toString())){
+            if (cursor.getString(0).equalsIgnoreCase(txtId.getText().toString())) {
                 cursor.close();
                 return true;
-            }else{
+            } else {
                 cursor.close();
                 return false;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             return false;
         }
     }
 
-    private class miTarea extends AsyncTask<Void, Void, Void> {
-
+}
+    /*private class miTarea extends AsyncTask<Void, Void, Void> {
 
         String UrlTxt  = "https://restcountries.eu/rest/v2/all";
         String elTextoBuffer;
@@ -185,15 +189,15 @@ public class Registro_C extends Activity {
                 //-----------------------------------------------------------------
                 //En el caso de que sean muchos datos
 
-                JSONArray elJSONArray = new JSONArray(new String(elTextoFinal));
+               /* JSONArray elJSONArray = new JSONArray(new String(elTextoFinal));
 
                 for(int i=0; i<elJSONArray.length() ;i++) {
                     JSONObject elJSON = elJSONArray.getJSONObject(i);
 
 
 
-                    /*UtilesUI.MensajeToast(getApplicationContext(),
-                            "El pais es: " + elJSON.getString("name"));*/
+                    UtilesUI.MensajeToast(getApplicationContext(),
+                            "El pais es: " + elJSON.getString("name"));
                 }//End For
 
                 //-----------------------------------------------------------------
@@ -207,5 +211,5 @@ public class Registro_C extends Activity {
 
         }//Fin onPostExecute
 
-    }
-}
+    }//Fin miTarea =======================*/
+
